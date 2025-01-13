@@ -6,47 +6,43 @@
     <title>GRADESHEET</title>
     <script src="https://kit.fontawesome.com/628bb20399.js" crossorigin="anonymous"></script>
     <style>
-        .flex{
-            border: 5px solid rgb(230, 0, 255);
-            display: block;
-            gap: 1px;
-            justify-content: center;
-            align-items: center;
+        body{
+            overflow-x: hidden;
+        }
+        section{
             width: 100%;
+            border: 1px solid rgb(230, 0, 255);
             height: 690px;
+            padding-left: 300px;
+            padding-right: 300px;
+           background-color: aqua;
         }
         #screen{
             border: 5px solid rgb(60, 0, 255);
-            width: 800px;
+            width: 900px;
             height: 200px;
-            margin-left: 200px;
-            padding-left: 300px;
-            background-color: beige;
-           
+            /* padding-left: 30px; */
+            background-color: beige; 
+        }
+        form{
+            border: 5px solid rgb(208, 255, 0);
+            width: 900px;
+            height: 200px;
+            background-color: black;
+            /* padding-left: 50px; */
         }
         button{
-            width: 700px;
+            width: 500px;
             height: 50px;
             border-radius: 20px;
-            margin-left: 400px;
             color: white;
             background-color: black;
             font-size: x-large;
             border: 4px solid rgb(244, 28, 28);
+            margin-left: 200px;
         }
         button:hover{
             zoom: 101%
-        }
-        form{
-            border: 5px solid rgb(208, 255, 0);
-            width: 1100px;
-            height: 200px;
-            margin-left: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            /* padding-left: 50px; */
         }
         input{
             border: 3px solid;
@@ -55,8 +51,14 @@
         }
         label{
             font-size: x-large;
-            color: white;
+            color: whitesmoke;
         }
+        h1{
+        font-size: 30px;
+        color: red;
+        margin-top: 150px;
+        margin-left: 280px;
+    }
         .fa-xmark{
             color: red;
             font-size: 100px;
@@ -89,26 +91,57 @@
         font-size: 100px;
         color: rgb(25, 184, 228);
     }
-    h1{
-        font-size: 60px;
-        color: red;
-        margin-top: 150px;
-        text-align: center;
+
+    @media screen and (max-width:850px){
+        body{
+            overflow-x: hidden;
+        }
+        section{
+            border: 2px solid red;
+            width: 100%;
+            height: 800px;
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+        #screen{
+            width: 100%;
+            padding-left: 1px;
+        }
+        form{
+            width: 100%;
+            padding-left: 1px;
+        }   
+        button{
+            width: 100px;
+            padding-left: 1px;
+            margin-left: 0px;
+            position: relative;
+            left: 35%;
+        }
+        input{
+            width: 50%;
+        }
+        h1{
+            font-size: small;
+            margin-left: 0px;
+            text-align: center;
+        }
     }
     </style>
 </head>
 <body>
-    <div class="flex">
-        <div id="screen"></div>
-        <form action="">
-            <label for="score">SCORE</label>
-            <input type="number" id="yourscore" placeholder="input your score here">
-        </form>
-        <button onclick="check()">check</button>
-      
-        <h1>GRADE CHECKER</h1>
-    </div>
-    
+    <section>
+        <!-- <div class="flex"> -->
+            <div id="screen"></div>
+            <form action="">
+                <label for="score">SCORE</label>
+                <input type="number" id="yourscore" placeholder="input your score here">
+            </form>
+            <button onclick="check()">check</button>
+          
+            <h1>GRADE CHECKER</h1>
+        <!-- </div> -->
+    </section>
      <script>
         function check(){
            let displayscreen = document.getElementById('screen')
