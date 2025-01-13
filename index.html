@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADESHEET</title>
+    <script src="https://kit.fontawesome.com/628bb20399.js" crossorigin="anonymous"></script>
+    <style>
+        .flex{
+            border: 5px solid rgb(230, 0, 255);
+            display: block;
+            gap: 1px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 690px;
+        }
+        #screen{
+            border: 5px solid rgb(60, 0, 255);
+            width: 800px;
+            height: 200px;
+            margin-left: 200px;
+            padding-left: 300px;
+            background-color: beige;
+           
+        }
+        button{
+            width: 700px;
+            height: 50px;
+            border-radius: 20px;
+            margin-left: 400px;
+            color: white;
+            background-color: black;
+            font-size: x-large;
+            border: 4px solid rgb(244, 28, 28);
+        }
+        button:hover{
+            zoom: 101%
+        }
+        form{
+            border: 5px solid rgb(208, 255, 0);
+            width: 1100px;
+            height: 200px;
+            margin-left: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            /* padding-left: 50px; */
+        }
+        input{
+            border: 3px solid;
+            width: 500px;
+            height: 100px;
+        }
+        label{
+            font-size: x-large;
+            color: white;
+        }
+        .fa-xmark{
+            color: red;
+            font-size: 100px;
+        }
+    .fa-a{
+        color: rgb(9, 243, 71);
+        font-size: 100px;
+    }
+    .fa-b{
+        font-size: 100px;
+        color: rgb(25, 28, 228);
+    }
+    .fa-c{
+        font-size: 100px;
+        color: rgb(187, 25, 228);
+    }
+    .fa-d{
+        font-size: 100px;
+        color: rgb(218, 228, 25);
+    }
+    .fa-e{
+        font-size: 100px;
+        color: rgb(228, 25, 25);
+    }
+    .fa-f{
+        font-size: 100px;
+        color: rgb(228, 25, 25);
+    }
+    .fa-thumbs-down{
+        font-size: 100px;
+        color: rgb(25, 184, 228);
+    }
+    h1{
+        font-size: 60px;
+        color: red;
+        margin-top: 150px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div id="screen"></div>
+        <form action="">
+            <label for="score">SCORE</label>
+            <input type="number" id="yourscore" placeholder="input your score here">
+        </form>
+        <button onclick="check()">check</button>
+      
+        <h1>GRADE CHECKER</h1>
+    </div>
+    
+     <script>
+        function check(){
+           let displayscreen = document.getElementById('screen')
+           let yourscore= document.getElementById ('yourscore').value
+            if(yourscore< 0){
+                 displayscreen.innerHTML = `<p> INVALID! <i class="fa-solid fa-xmark"></i> </p>`
+                 displayscreen.style.fontSize= '50px'
+            }
+            else if (yourscore <=39){
+                
+                displayscreen.innerHTML= `<p> Your grade is <i class="fa-solid fa-f"></i> <i class="fa-solid fa-thumbs-down"></i></p>`
+                displayscreen.style.fontSize= '50px'
+            }
+            else if(yourscore <= 40|| yourscore <= 44){
+                 displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-e"></i></p>`
+                 displayscreen.style.fontSize= '50px'
+            }
+           else if(yourscore <=45|| yourscore<=49){
+            displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-d"></i></p>`
+            displayscreen.style.fontSize= '50px'
+           }
+           else if(yourscore<=50 || yourscore <=59) {
+             displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-c"></i></p>`
+             displayscreen.style.fontSize= '50px'
+           }
+           else if(yourscore <=60 || yourscore <=69){
+            displayscreen.innerHTML = `<p> Your score is <i class="fa-solid fa-b"></i></p>`
+            displayscreen.style.fontSize= '50px'
+           }
+           else if(yourscore <=70 || yourscore<=100){
+             displayscreen.innerHTML = `<p> Your score is <i class="fa-solid fa-a"></i></p>`
+             displayscreen.style.fontSize= '50px'
+           }
+           else{
+             displayscreen.innerHTML = `<p> INVALID! <i class="fa-solid fa-xmark"></i></p>`
+             displayscreen.style.fontSize= '50px'
+           }
+        }
+       
+     </script>
+</body>
+</html>
