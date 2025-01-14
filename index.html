@@ -93,9 +93,9 @@
     }
 
     @media screen and (max-width:850px){
-        body{
+        /* body{
             overflow-x: hidden;
-        }
+        } */
         section{
             border: 2px solid red;
             width: 100%;
@@ -147,6 +147,9 @@
         function check(){
            let displayscreen = document.getElementById('screen')
            let yourscore= document.getElementById ('yourscore').value
+        
+        //    let grade = (yourscore<=50 || yourscore <=59) && (yourscore <=60 || yourscore <=69) ? 'Your grade is C' : 'Your grade is B'
+        //    displayscreen.innerHTML = grade
             if(yourscore< 0){
                  displayscreen.innerHTML = `<p> INVALID! <i class="fa-solid fa-xmark"></i> </p>`
                  displayscreen.style.fontSize= '50px'
@@ -157,23 +160,23 @@
                 displayscreen.style.fontSize= '50px'
             }
             else if(yourscore <= 40|| yourscore <= 44){
-                 displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-e"></i></p>`
+                 displayscreen.innerHTML= `<p> Your Grade is <i class="fa-solid fa-e"></i></p>`
                  displayscreen.style.fontSize= '50px'
             }
            else if(yourscore <=45|| yourscore<=49){
-            displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-d"></i></p>`
+            displayscreen.innerHTML= `<p> Your Grade is <i class="fa-solid fa-d"></i></p>`
             displayscreen.style.fontSize= '50px'
            }
            else if(yourscore<=50 || yourscore <=59) {
-             displayscreen.innerHTML= `<p> Your score is <i class="fa-solid fa-c"></i></p>`
+             displayscreen.innerHTML= `<p> Your Grade is <i class="fa-solid fa-c"></i></p>`
              displayscreen.style.fontSize= '50px'
            }
            else if(yourscore <=60 || yourscore <=69){
-            displayscreen.innerHTML = `<p> Your score is <i class="fa-solid fa-b"></i></p>`
+            displayscreen.innerHTML = `<p> Your Grade is <i class="fa-solid fa-b"></i></p>`
             displayscreen.style.fontSize= '50px'
            }
            else if(yourscore <=70 || yourscore<=100){
-             displayscreen.innerHTML = `<p> Your score is <i class="fa-solid fa-a"></i></p>`
+             displayscreen.innerHTML = `<p> Your Grade is <i class="fa-solid fa-a"></i></p>`
              displayscreen.style.fontSize= '50px'
            }
            else{
